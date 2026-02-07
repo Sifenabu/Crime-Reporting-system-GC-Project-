@@ -1,0 +1,30 @@
+/* Fix for Leaflet custom marker styles */
+.custom-marker {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.custom-marker:hover {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Override default Leaflet popup styles */
+.leaflet-popup-content-wrapper {
+  background-color: rgb(var(--color-card) / 1);
+  color: rgb(var(--color-card-foreground) / 1);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-tip {
+  background-color: rgb(var(--color-card) / 1);
+}
+
+.leaflet-popup-close-button {
+  color: rgb(var(--color-muted-foreground) / 1);
+}
+
+.leaflet-popup-close-button:hover {
+  color: rgb(var(--color-foreground) / 1);
+}

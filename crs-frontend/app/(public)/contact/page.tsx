@@ -17,6 +17,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Send, Check, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import Link from "next/link";
 
 const contactSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -86,7 +87,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Emergency",
-      details: "911",
+      details: "9141",
       description: "For immediate emergency assistance",
     },
     {
@@ -144,15 +145,16 @@ export default function ContactPage() {
 
         <Card className="mb-12 bg-destructive text-destructive-foreground">
           <CardContent className="p-6">
+            <Link href="tel:9141">
             <div className="flex items-center justify-center gap-4 text-center">
               <Phone className="h-8 w-8" />
               <div>
-                <h3 className="text-xl font-bold">Emergency? Call 911</h3>
+                <h3 className="text-xl font-bold">Emergency? Call 9141</h3>
                 <p className="text-destructive-foreground/90">
                   For immediate police, fire, or medical assistance
                 </p>
               </div>
-            </div>
+            </div></Link>
           </CardContent>
         </Card>
 
